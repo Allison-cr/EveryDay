@@ -1,0 +1,646 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FEC50BB22C1C9A6A0073698D /* EveryDayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC50BB12C1C9A6A0073698D /* EveryDayApp.swift */; };
+		FEC50BB62C1C9A6C0073698D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEC50BB52C1C9A6C0073698D /* Assets.xcassets */; };
+		FEC50BB92C1C9A6C0073698D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEC50BB82C1C9A6C0073698D /* Preview Assets.xcassets */; };
+		FEC50BC62C1C9ACE0073698D /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC50BC52C1C9ACE0073698D /* MainCoordinator.swift */; };
+		FEC50BC82C1C9B200073698D /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC50BC72C1C9B200073698D /* OnboardingCoordinator.swift */; };
+		FEC50BCB2C1C9B4F0073698D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC50BCA2C1C9B4F0073698D /* OnboardingView.swift */; };
+		FEC50BCF2C1C9C770073698D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC50BCE2C1C9C770073698D /* ContentView.swift */; };
+		FEC50BD12C1C9C940073698D /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC50BD02C1C9C940073698D /* OnboardingPageView.swift */; };
+		FEC50BD42C1C9EB70073698D /* AppDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FEC50BD22C1C9EB70073698D /* AppDataModel.xcdatamodeld */; };
+		FEC50BD72C1C9F620073698D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC50BD62C1C9F620073698D /* CoreDataManager.swift */; };
+		FEC50BD92C1C9F7B0073698D /* AppUsageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC50BD82C1C9F7B0073698D /* AppUsageManager.swift */; };
+		FEC50BDB2C1CC94C0073698D /* MainTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC50BDA2C1CC94C0073698D /* MainTabCoordinator.swift */; };
+		FEC50BDD2C1CCFB30073698D /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC50BDC2C1CCFB30073698D /* MainTabView.swift */; };
+		FEC50BE42C1F11AE0073698D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC50BE32C1F11AE0073698D /* SettingsView.swift */; };
+		FEC50BE72C1F11DE0073698D /* ThemeChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC50BE62C1F11DE0073698D /* ThemeChangeView.swift */; };
+		FEC50BEA2C1F122B0073698D /* Ext + color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC50BE92C1F122B0073698D /* Ext + color.swift */; };
+		FEC50BEC2C1F17E90073698D /* EnumTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC50BEB2C1F17E90073698D /* EnumTheme.swift */; };
+		FEC50BF12C206C600073698D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FEC50BF02C206C600073698D /* RealmSwift */; };
+		FEC50BF22C206C890073698D /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = FEC50BF02C206C600073698D /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		FEC50BF52C206CC70073698D /* AddScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC50BF42C206CC70073698D /* AddScheduleView.swift */; };
+		FEC50BF72C206CFF0073698D /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC50BF62C206CFF0073698D /* ScheduleView.swift */; };
+		FEC50BF92C206D1D0073698D /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC50BF82C206D1D0073698D /* ScheduleModel.swift */; };
+		FEC50BFB2C206D320073698D /* ScheduleCustomItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC50BFA2C206D320073698D /* ScheduleCustomItemView.swift */; };
+		FEC50BFD2C206D4A0073698D /* SwipeableScheduleItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC50BFC2C206D4A0073698D /* SwipeableScheduleItemView.swift */; };
+		FEC50C002C206EA30073698D /* CustomToggle in Frameworks */ = {isa = PBXBuildFile; productRef = FEC50BFF2C206EA30073698D /* CustomToggle */; };
+		FEC50C032C2070790073698D /* Migrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC50C022C2070790073698D /* Migrator.swift */; };
+		FEC50C062C2072E30073698D /* AddTaskListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC50C052C2072E30073698D /* AddTaskListScreen.swift */; };
+		FEC50C082C2072FA0073698D /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC50C072C2072FA0073698D /* TaskView.swift */; };
+		FEC50C0A2C2073140073698D /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC50C092C2073140073698D /* TaskList.swift */; };
+		FEC50C0C2C2088040073698D /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC50C0B2C2088040073698D /* ScheduleViewModel.swift */; };
+		FEC50C102C2088BF0073698D /* AddScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC50C0F2C2088BF0073698D /* AddScheduleViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FEC50BF32C206C890073698D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FEC50BF22C206C890073698D /* RealmSwift in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FEC50BAE2C1C9A6A0073698D /* EveryDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EveryDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEC50BB12C1C9A6A0073698D /* EveryDayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EveryDayApp.swift; sourceTree = "<group>"; };
+		FEC50BB52C1C9A6C0073698D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FEC50BB82C1C9A6C0073698D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FEC50BC52C1C9ACE0073698D /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		FEC50BC72C1C9B200073698D /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
+		FEC50BCA2C1C9B4F0073698D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		FEC50BCE2C1C9C770073698D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FEC50BD02C1C9C940073698D /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
+		FEC50BD32C1C9EB70073698D /* AppDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AppDataModel.xcdatamodel; sourceTree = "<group>"; };
+		FEC50BD62C1C9F620073698D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		FEC50BD82C1C9F7B0073698D /* AppUsageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUsageManager.swift; sourceTree = "<group>"; };
+		FEC50BDA2C1CC94C0073698D /* MainTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCoordinator.swift; sourceTree = "<group>"; };
+		FEC50BDC2C1CCFB30073698D /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		FEC50BE32C1F11AE0073698D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		FEC50BE62C1F11DE0073698D /* ThemeChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChangeView.swift; sourceTree = "<group>"; };
+		FEC50BE92C1F122B0073698D /* Ext + color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext + color.swift"; sourceTree = "<group>"; };
+		FEC50BEB2C1F17E90073698D /* EnumTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumTheme.swift; sourceTree = "<group>"; };
+		FEC50BF42C206CC70073698D /* AddScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScheduleView.swift; sourceTree = "<group>"; };
+		FEC50BF62C206CFF0073698D /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		FEC50BF82C206D1D0073698D /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
+		FEC50BFA2C206D320073698D /* ScheduleCustomItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCustomItemView.swift; sourceTree = "<group>"; };
+		FEC50BFC2C206D4A0073698D /* SwipeableScheduleItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableScheduleItemView.swift; sourceTree = "<group>"; };
+		FEC50C022C2070790073698D /* Migrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Migrator.swift; sourceTree = "<group>"; };
+		FEC50C052C2072E30073698D /* AddTaskListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskListScreen.swift; sourceTree = "<group>"; };
+		FEC50C072C2072FA0073698D /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
+		FEC50C092C2073140073698D /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
+		FEC50C0B2C2088040073698D /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
+		FEC50C0F2C2088BF0073698D /* AddScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScheduleViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FEC50BAB2C1C9A6A0073698D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEC50BF12C206C600073698D /* RealmSwift in Frameworks */,
+				FEC50C002C206EA30073698D /* CustomToggle in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FEC50BA52C1C9A6A0073698D = {
+			isa = PBXGroup;
+			children = (
+				FEC50BB02C1C9A6A0073698D /* EveryDay */,
+				FEC50BAF2C1C9A6A0073698D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FEC50BAF2C1C9A6A0073698D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FEC50BAE2C1C9A6A0073698D /* EveryDay.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FEC50BB02C1C9A6A0073698D /* EveryDay */ = {
+			isa = PBXGroup;
+			children = (
+				FEC50C012C20703B0073698D /* Migrator */,
+				FEC50BE82C1F12190073698D /* Utils */,
+				FEC50BD52C1C9F4A0073698D /* CoreData */,
+				FEC50BC92C1C9B420073698D /* UILayer */,
+				FEC50BC42C1C9AB60073698D /* NavigationLayer */,
+				FEC50BB12C1C9A6A0073698D /* EveryDayApp.swift */,
+				FEC50BB52C1C9A6C0073698D /* Assets.xcassets */,
+				FEC50BD22C1C9EB70073698D /* AppDataModel.xcdatamodeld */,
+				FEC50BB72C1C9A6C0073698D /* Preview Content */,
+			);
+			path = EveryDay;
+			sourceTree = "<group>";
+		};
+		FEC50BB72C1C9A6C0073698D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FEC50BB82C1C9A6C0073698D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FEC50BC42C1C9AB60073698D /* NavigationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				FEC50BCE2C1C9C770073698D /* ContentView.swift */,
+				FEC50BC52C1C9ACE0073698D /* MainCoordinator.swift */,
+				FEC50BC72C1C9B200073698D /* OnboardingCoordinator.swift */,
+				FEC50BDA2C1CC94C0073698D /* MainTabCoordinator.swift */,
+			);
+			path = NavigationLayer;
+			sourceTree = "<group>";
+		};
+		FEC50BC92C1C9B420073698D /* UILayer */ = {
+			isa = PBXGroup;
+			children = (
+				FEC50C042C2072CD0073698D /* Task */,
+				FEC50BDE2C1F115A0073698D /* Onboarding */,
+				FEC50BE22C1F11900073698D /* ScheduleModule */,
+				FEC50BE12C1F11820073698D /* Calendar */,
+				FEC50BE02C1F11760073698D /* Settings */,
+				FEC50BDF2C1F11680073698D /* TabView */,
+			);
+			path = UILayer;
+			sourceTree = "<group>";
+		};
+		FEC50BD52C1C9F4A0073698D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				FEC50BD62C1C9F620073698D /* CoreDataManager.swift */,
+				FEC50BD82C1C9F7B0073698D /* AppUsageManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		FEC50BDE2C1F115A0073698D /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				FEC50BCA2C1C9B4F0073698D /* OnboardingView.swift */,
+				FEC50BD02C1C9C940073698D /* OnboardingPageView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		FEC50BDF2C1F11680073698D /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				FEC50BDC2C1CCFB30073698D /* MainTabView.swift */,
+			);
+			path = TabView;
+			sourceTree = "<group>";
+		};
+		FEC50BE02C1F11760073698D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				FEC50BE52C1F11C70073698D /* Theme */,
+				FEC50BE32C1F11AE0073698D /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		FEC50BE12C1F11820073698D /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		FEC50BE22C1F11900073698D /* ScheduleModule */ = {
+			isa = PBXGroup;
+			children = (
+				FEC50C0E2C2088330073698D /* Schedule */,
+				FEC50C0D2C20881A0073698D /* AddSchedule */,
+				FEC50C112C2098680073698D /* ScheduleModel */,
+				FEC50C122C20987E0073698D /* DeleteSchedule */,
+			);
+			path = ScheduleModule;
+			sourceTree = "<group>";
+		};
+		FEC50BE52C1F11C70073698D /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				FEC50BE62C1F11DE0073698D /* ThemeChangeView.swift */,
+				FEC50BEB2C1F17E90073698D /* EnumTheme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		FEC50BE82C1F12190073698D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FEC50BE92C1F122B0073698D /* Ext + color.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FEC50C012C20703B0073698D /* Migrator */ = {
+			isa = PBXGroup;
+			children = (
+				FEC50C022C2070790073698D /* Migrator.swift */,
+			);
+			path = Migrator;
+			sourceTree = "<group>";
+		};
+		FEC50C042C2072CD0073698D /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				FEC50C052C2072E30073698D /* AddTaskListScreen.swift */,
+				FEC50C072C2072FA0073698D /* TaskView.swift */,
+				FEC50C092C2073140073698D /* TaskList.swift */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		FEC50C0D2C20881A0073698D /* AddSchedule */ = {
+			isa = PBXGroup;
+			children = (
+				FEC50C0F2C2088BF0073698D /* AddScheduleViewModel.swift */,
+				FEC50BF42C206CC70073698D /* AddScheduleView.swift */,
+			);
+			path = AddSchedule;
+			sourceTree = "<group>";
+		};
+		FEC50C0E2C2088330073698D /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				FEC50BF62C206CFF0073698D /* ScheduleView.swift */,
+				FEC50C0B2C2088040073698D /* ScheduleViewModel.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		FEC50C112C2098680073698D /* ScheduleModel */ = {
+			isa = PBXGroup;
+			children = (
+				FEC50BF82C206D1D0073698D /* ScheduleModel.swift */,
+			);
+			path = ScheduleModel;
+			sourceTree = "<group>";
+		};
+		FEC50C122C20987E0073698D /* DeleteSchedule */ = {
+			isa = PBXGroup;
+			children = (
+				FEC50BFA2C206D320073698D /* ScheduleCustomItemView.swift */,
+				FEC50BFC2C206D4A0073698D /* SwipeableScheduleItemView.swift */,
+			);
+			path = DeleteSchedule;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FEC50BAD2C1C9A6A0073698D /* EveryDay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEC50BC12C1C9A6C0073698D /* Build configuration list for PBXNativeTarget "EveryDay" */;
+			buildPhases = (
+				FEC50BAA2C1C9A6A0073698D /* Sources */,
+				FEC50BAB2C1C9A6A0073698D /* Frameworks */,
+				FEC50BAC2C1C9A6A0073698D /* Resources */,
+				FEC50BF32C206C890073698D /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EveryDay;
+			packageProductDependencies = (
+				FEC50BF02C206C600073698D /* RealmSwift */,
+				FEC50BFF2C206EA30073698D /* CustomToggle */,
+			);
+			productName = EveryDay;
+			productReference = FEC50BAE2C1C9A6A0073698D /* EveryDay.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FEC50BA62C1C9A6A0073698D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					FEC50BAD2C1C9A6A0073698D = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = FEC50BA92C1C9A6A0073698D /* Build configuration list for PBXProject "EveryDay" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FEC50BA52C1C9A6A0073698D;
+			packageReferences = (
+				FEC50BED2C206C600073698D /* XCRemoteSwiftPackageReference "realm-swift" */,
+				FEC50BFE2C206EA30073698D /* XCRemoteSwiftPackageReference "CustomToggle" */,
+			);
+			productRefGroup = FEC50BAF2C1C9A6A0073698D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FEC50BAD2C1C9A6A0073698D /* EveryDay */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FEC50BAC2C1C9A6A0073698D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEC50BB92C1C9A6C0073698D /* Preview Assets.xcassets in Resources */,
+				FEC50BB62C1C9A6C0073698D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FEC50BAA2C1C9A6A0073698D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEC50C0A2C2073140073698D /* TaskList.swift in Sources */,
+				FEC50BD12C1C9C940073698D /* OnboardingPageView.swift in Sources */,
+				FEC50BF52C206CC70073698D /* AddScheduleView.swift in Sources */,
+				FEC50BC82C1C9B200073698D /* OnboardingCoordinator.swift in Sources */,
+				FEC50BD92C1C9F7B0073698D /* AppUsageManager.swift in Sources */,
+				FEC50BD72C1C9F620073698D /* CoreDataManager.swift in Sources */,
+				FEC50BCF2C1C9C770073698D /* ContentView.swift in Sources */,
+				FEC50BE72C1F11DE0073698D /* ThemeChangeView.swift in Sources */,
+				FEC50BF72C206CFF0073698D /* ScheduleView.swift in Sources */,
+				FEC50BFB2C206D320073698D /* ScheduleCustomItemView.swift in Sources */,
+				FEC50BFD2C206D4A0073698D /* SwipeableScheduleItemView.swift in Sources */,
+				FEC50C062C2072E30073698D /* AddTaskListScreen.swift in Sources */,
+				FEC50BC62C1C9ACE0073698D /* MainCoordinator.swift in Sources */,
+				FEC50C0C2C2088040073698D /* ScheduleViewModel.swift in Sources */,
+				FEC50BEA2C1F122B0073698D /* Ext + color.swift in Sources */,
+				FEC50BB22C1C9A6A0073698D /* EveryDayApp.swift in Sources */,
+				FEC50C082C2072FA0073698D /* TaskView.swift in Sources */,
+				FEC50BD42C1C9EB70073698D /* AppDataModel.xcdatamodeld in Sources */,
+				FEC50BF92C206D1D0073698D /* ScheduleModel.swift in Sources */,
+				FEC50C102C2088BF0073698D /* AddScheduleViewModel.swift in Sources */,
+				FEC50BCB2C1C9B4F0073698D /* OnboardingView.swift in Sources */,
+				FEC50BE42C1F11AE0073698D /* SettingsView.swift in Sources */,
+				FEC50C032C2070790073698D /* Migrator.swift in Sources */,
+				FEC50BDB2C1CC94C0073698D /* MainTabCoordinator.swift in Sources */,
+				FEC50BEC2C1F17E90073698D /* EnumTheme.swift in Sources */,
+				FEC50BDD2C1CCFB30073698D /* MainTabView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FEC50BBF2C1C9A6C0073698D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FEC50BC02C1C9A6C0073698D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FEC50BC22C1C9A6C0073698D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EveryDay/Preview Content\"";
+				DEVELOPMENT_TEAM = 84HMKC95WY;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Allison.EveryDay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FEC50BC32C1C9A6C0073698D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EveryDay/Preview Content\"";
+				DEVELOPMENT_TEAM = 84HMKC95WY;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Allison.EveryDay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FEC50BA92C1C9A6A0073698D /* Build configuration list for PBXProject "EveryDay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEC50BBF2C1C9A6C0073698D /* Debug */,
+				FEC50BC02C1C9A6C0073698D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FEC50BC12C1C9A6C0073698D /* Build configuration list for PBXNativeTarget "EveryDay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEC50BC22C1C9A6C0073698D /* Debug */,
+				FEC50BC32C1C9A6C0073698D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FEC50BED2C206C600073698D /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		FEC50BFE2C206EA30073698D /* XCRemoteSwiftPackageReference "CustomToggle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Allison-cr/CustomToggle";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FEC50BF02C206C600073698D /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FEC50BED2C206C600073698D /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		FEC50BFF2C206EA30073698D /* CustomToggle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FEC50BFE2C206EA30073698D /* XCRemoteSwiftPackageReference "CustomToggle" */;
+			productName = CustomToggle;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		FEC50BD22C1C9EB70073698D /* AppDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FEC50BD32C1C9EB70073698D /* AppDataModel.xcdatamodel */,
+			);
+			currentVersion = FEC50BD32C1C9EB70073698D /* AppDataModel.xcdatamodel */;
+			path = AppDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FEC50BA62C1C9A6A0073698D /* Project object */;
+}
