@@ -11,7 +11,7 @@ struct ThemeChangeView: View {
     var scheme: ColorScheme
     @AppStorage("userTheme") private var userTheme: Theme = .systemDefault
     @Namespace private var animation
-    @State private var circleOffset: CGSize = .zero
+    @State private var circleOffset: CGSize
     init(scheme: ColorScheme) {
         self.scheme = scheme
         let isDark = scheme == .dark
@@ -24,7 +24,7 @@ struct ThemeChangeView: View {
         VStack {
             Circle()
                 .fill(userTheme.color(scheme).gradient)
-                .frame(width: 150)
+                .frame(width: 150,height: 150)
                 .mask{
                     Rectangle()
                         .overlay{
@@ -70,6 +70,9 @@ struct ThemeChangeView: View {
         .clipShape(.rect(cornerRadius: 30))
         .padding(.horizontal, 15)
         .environment(\.colorScheme, scheme)
+        .onChange(of: userTheme) { _ in
+
+        }
         .onChange(of: scheme, initial: false ) { _, newValue in
             let isDark = newValue == .dark
             withAnimation(.bouncy) {
@@ -83,5 +86,5 @@ struct ThemeChangeView: View {
 }
 
 #Preview {
-    ThemeChangeView(scheme: .light)
+    ThemeChangeView(scheme: .dark)
 }

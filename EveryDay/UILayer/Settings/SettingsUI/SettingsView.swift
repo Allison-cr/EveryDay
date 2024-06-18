@@ -7,10 +7,8 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @StateObject private var settingsCoordinator = SettingsCoordinator()
-    @Environment(\.colorScheme) private var scheme
-    @AppStorage("userTheme") private var userTheme: Theme = .systemDefault
-
+    @ObservedObject private var settingsCoordinator = SettingsCoordinator()
+    
     var body: some View {
         NavigationStack {
             List {
@@ -25,7 +23,6 @@ struct SettingsView: View {
             }
             .navigationTitle("Settings")
         }
-        .preferredColorScheme(userTheme.colorScheme)
         .sheet(isPresented: $settingsCoordinator.isSettingsSheetPresented) {
             SettingsSheetView(coordinator: settingsCoordinator)
                 .presentationDetents([.height(410)])

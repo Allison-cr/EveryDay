@@ -9,13 +9,15 @@ import SwiftUI
 
 struct SettingsSheetView: View {
     @ObservedObject var coordinator: SettingsCoordinator
-    @Environment(\.colorScheme) var scheme
+    @Environment(\.colorScheme) private var scheme
+    @AppStorage("userTheme") private var userTheme: Theme = .systemDefault
     @StateObject private var colorPickerViewModel = ColorPickerViewModel()
 
     var body: some View {
         switch coordinator.currentSheet {
         case .themeChange:
             ThemeChangeView(scheme: scheme)
+                .preferredColorScheme(userTheme.colorScheme)
         case .colorChange:
             ColorPickerButton(viewModel: colorPickerViewModel)
         case .none:
