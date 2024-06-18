@@ -11,11 +11,11 @@ import RealmSwift
 
 struct ScheduleCustomItemView: View {
     var event : ScheduleList
-    var colorSet: ColorSet
+    var colorSet: LinearGradient
 
     var body: some View {
         ZStack {
-            colorSet.background
+            colorSet
             VStack(alignment: .leading, spacing: 0) {
                 Text("\(event.title)")
                     .font(.system(size: 40, weight: .bold))
@@ -23,11 +23,9 @@ struct ScheduleCustomItemView: View {
                 HStack {
                     Text(event.teacher)
                         .lineLimit(1)
-
                     Spacer()
                     Text(event.location)
                         .lineLimit(1)
-
                 }
                 .padding(.vertical, 12)
                 .font(.system(size: 32, weight: .bold))
@@ -41,7 +39,7 @@ struct ScheduleCustomItemView: View {
             }
             .padding(.horizontal, 16)
         }
-        .foregroundColor(colorSet.text)
+        .foregroundColor(.black)
         .frame(width: UIScreen.main.bounds.size.width - 40, height:  UIScreen.main.bounds.size.height / 4 + 20)
         .cornerRadius(25)
     }
@@ -58,11 +56,10 @@ struct ScheduleCustomItemView: View {
     testEvent.week = ParityWeek.honest.rawValue
     testEvent.day = Days.monday.rawValue
 
-    let testColorSet = ColorSet(background: LinearGradient(
+    let testColorSet = LinearGradient(
         colors: [.purple, .blue, .cyan],
         startPoint: .topLeading,
-        endPoint: .bottomTrailing),
-        text: .white)
+        endPoint: .bottomTrailing)
     return ScheduleCustomItemView(event: testEvent, colorSet: testColorSet)
 }
 

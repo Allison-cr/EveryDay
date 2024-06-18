@@ -9,16 +9,9 @@ import RealmSwift
 
 class ScheduleViewModel: ObservableObject {
     @Published var scheduleLists: Results<ScheduleList>
-    @Published var colorSets: [ColorSet]
     private var notificationToken: NotificationToken?
-    
-    init() {
-        colorSets = [
-            ColorSet(background: LinearGradient(colors: [.purple, .blue, .cyan], startPoint: .topLeading, endPoint: .bottomTrailing), text: .black),
-            ColorSet(background: LinearGradient(colors: [.cyanback, .blue, .purple], startPoint: .topLeading, endPoint: .bottomTrailing), text: .black),
-            ColorSet(background: LinearGradient(colors: [.blue, .cyanback, .purple], startPoint: .topLeading, endPoint: .bottomTrailing), text: .black)
-        ]
-        
+
+    init() {        
         let realm = try! Realm()
         scheduleLists = realm.objects(ScheduleList.self).sorted(byKeyPath: "timestart", ascending: true)
         notificationToken = scheduleLists.observe { [weak self] _ in

@@ -8,12 +8,6 @@
 import Foundation
 import SwiftUI
 
-
-struct ColorSet {
-    var background: LinearGradient
-    var text: Color
-}
-
 extension Color {
     init(hex: UInt, alpha: Double = 1) {
            self.init(

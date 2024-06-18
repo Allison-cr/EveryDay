@@ -83,5 +83,5 @@ struct ThemeChangeView: View {
 }
 
 #Preview {
-    ThemeChangeView(scheme: .dark)
+    ThemeChangeView(scheme: .light)
 }

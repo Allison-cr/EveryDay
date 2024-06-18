@@ -7,27 +7,30 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @State private var changeTheme: Bool = false
-    @Environment(\.colorScheme) private var  scheme
+    @StateObject private var settingsCoordinator = SettingsCoordinator()
+    @Environment(\.colorScheme) private var scheme
     @AppStorage("userTheme") private var userTheme: Theme = .systemDefault
+
     var body: some View {
         NavigationStack {
             List {
-                Section("Apperance") {
+                Section("Appearance") {
                     Button("Change Theme") {
-                        changeTheme.toggle()
+                        settingsCoordinator.presentSheet(.themeChange)
+                    }
+                    Button("Change App Color") {
+                        settingsCoordinator.presentSheet(.colorChange)
                     }
                 }
             }
             .navigationTitle("Settings")
         }
         .preferredColorScheme(userTheme.colorScheme)
-        .sheet(isPresented: $changeTheme, content: {
-            ThemeChangeView(scheme: scheme)
-            
+        .sheet(isPresented: $settingsCoordinator.isSettingsSheetPresented) {
+            SettingsSheetView(coordinator: settingsCoordinator)
                 .presentationDetents([.height(410)])
                 .presentationBackground(.clear)
-        })
+        }
     }
 }
 

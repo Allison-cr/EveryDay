@@ -9,10 +9,9 @@ import RealmSwift
 
 struct SwipeableScheduleItemView: View {
     @ObservedRealmObject var scheduleList: ScheduleList
+    @ObservedObject private var colorPickerViewModel = ColorPickerViewModel()
     @State private var offset: CGFloat = 0
-    var colorSet: ColorSet
     var onDelete: () -> Void
-
     var body: some View {
         ZStack {
             HStack {
@@ -23,12 +22,13 @@ struct SwipeableScheduleItemView: View {
                     Image(systemName: "clear.fill")
                         .font(.system(size: 70))
                         .cornerRadius(8)
-                        .customTitleStyle()
+                        .customTitleStyle(colors: colorPickerViewModel.colorSet())
+                        .opacity(abs(offset / UIScreen.main.bounds.width))
                 }
                 .padding(.trailing, 30)
             }
             if !scheduleList.isInvalidated {
-                ScheduleCustomItemView(event: scheduleList, colorSet: colorSet)
+                ScheduleCustomItemView(event: scheduleList, colorSet: LinearGradient(colors: colorPickerViewModel.colorSet(), startPoint: .leading, endPoint: .trailing))
                     .offset(x: offset)
                     .gesture(
                         DragGesture()
@@ -39,10 +39,11 @@ struct SwipeableScheduleItemView: View {
                                             offset = gesture.translation.width
                                         } else {
                                             onDelete()
-                                            offset = 0  // Сброс смещения после удаления
+                                            offset = 0
                                         }
                                     } else {
                                         offset = 0
+
                                     }
                                 }
                             }
@@ -57,3 +58,4 @@ struct SwipeableScheduleItemView: View {
         }
     }
 }
+
